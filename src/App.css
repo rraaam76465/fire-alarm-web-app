@@ -1,33 +1,42 @@
-/* Global Styles */
+/* General Styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-.App {
+.container {
+  width: 100%;
+  height: 100vh; /* Make sure the height is 100% of the viewport */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #f9f9f9;
-  padding: 20px;
 }
 
-/* Header Section */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h2 {
+  color: black;
+}
+
+.header p {
+  color: 8F918E;
 }
 
 .user-info {
   display: flex;
   align-items: center;
+  color: black;
 }
 
 .profile-pic {
@@ -37,73 +46,42 @@ body {
   margin-right: 10px;
 }
 
-.user-details h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.user-details p {
-  font-size: 14px;
-  color: gray;
-}
-
-.notification-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.notification-img {
+.notification-icon img {
   width: 30px;
   height: 30px;
 }
 
-/* Temperature & Status Section */
 .status-section {
-  background-color: #ff6666;
-  border-radius: 10px;
-  padding: 15px;
-  color: white;
+  padding: 20px;
+  background-color: #F4626A;
   text-align: center;
 }
 
 .temperature-box h1 {
-  font-size: 48px;
-  margin: 0;
+  font-size: 3rem;
 }
 
-.status-details {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-  font-size: 14px;
+.status-details p {
+  font-size: 1.2rem;
 }
 
-/* Tab Navigation */
 .tabs ul {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
-  margin-top: 20px;
-  border-bottom: 2px solid #ddd;
-}
-
-.tabs li {
-  list-style: none;
   padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #888;
+  list-style-type: none;
+  background-color: #fff;
 }
 
-.tabs .active {
-  border-bottom: 3px solid red;
-  color: black;
+.tabs ul li {
+  padding: 10px;
+  font-size: 1rem;
 }
-
 /* Card Layout Section */
 .card-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, auto); /* Two rows */
   gap: 20px;
   margin-top: 20px;
 }
@@ -114,59 +92,102 @@ body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 200px; /* Static height for all cards */
+  overflow: hidden; /* Hide overflow content */
 }
 
+/* System Health and Recent Alerts on top */
 .card.system-health {
-  grid-column: span 2;
+  height: 300px; /* Full width for System Health card */
+}
+
+.card.system-health img {
+  margin-top: 20px; /* Adjust margin for image */
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
 }
 
 .card.recent-alerts {
-  grid-column: span 2;
+  height: 300px/* Full width for Recent Alerts card */
 }
 
-.card.map img {
-  width: 100%;
-  border-radius: 10px;
+.card.recent-alerts img {
+  margin-top: 20px; /* Adjust margin for image */
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* Map and Add Device on the bottom */
+.card.map {
+  height: 300px; /* Maintain same height for Map card */
 }
 
 .card.add-device {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 300px; /* Maintain same height for Add Device card */
 }
 
 .card.add-device img {
-  margin-top: 120px;
+  margin-top: 80px; /* Adjust margin for image */
   height: 80px;
   width: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Bottom Navigation */
 .bottom-nav {
-  margin-top: auto;
-  background-color: white;
-  padding: 10px 0;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Make the navigation fixed */
+  bottom: 0; /* Align it to the bottom */
+  left: 0; /* Align to the left edge */
+  right: 0; /* Align to the right edge */
+  background-color: white; /* Set background color */
+  padding: 10px 0; /* Padding for the nav */
+  border-radius: 20px 20px 0 0; /* Rounded top corners */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  z-index: 100; /* Ensure it appears above other content */
 }
 
 .bottom-nav ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
+  display: flex; /* Flex layout */
+  justify-content: space-around; /* Space out the items */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* No bullet points */
+  margin: 0; /* Remove default margin */
 }
 
 .bottom-nav li {
-  text-align: center;
-  font-size: 14px;
+  text-align: center; /* Center text */
+  flex: 1; /* Equal space for all items */
 }
 
 .bottom-nav img {
-  width: 24px; /* Adjust icon size */
-  height: 24px;
+  width: 24px; /* Icon size */
+  height: 24px; /* Icon size */
 }
 
 .bottom-nav p {
   margin-top: 4px; /* Space between icon and text */
+}
+
+.bottom-nav ul li p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Prevent text links from looking like links */
+.nav-item {
+  text-decoration: none;
+  color: black; /* Default text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-item:hover {
+  color: #F4626A; /* Change color on hover to #F4626A */
 }

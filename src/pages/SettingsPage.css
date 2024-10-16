@@ -1,0 +1,35 @@
+.settings-page {
+    padding: 20px;
+    width: 100%; /* Make sure it fills the entire width */
+    background-color: #F4626A; /* Main background color */
+    color: white; /* Text color for readability */
+    border-radius: 8px; /* Slightly rounded corners */
+  }
+  
+  h1, h2 {
+    color: white; /* Heading colors */
+  }
+  
+  section {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for contrast */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners for sections */
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFFFFF; /* Button color */
+    color: #F4626A; /* Button text color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition effect */
+  }
+  
+  button:hover {
+    background-color: #F4626A; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+  }
+  
