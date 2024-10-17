@@ -11,7 +11,7 @@ body {
 
 .container {
   width: 100%;
-  height: 100vh; /* Make sure the height is 100% of the viewport */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
 }
@@ -65,10 +65,13 @@ body {
   font-size: 1.2rem;
 }
 
+.tabs{
+  margin-bottom: 0px;
+}
 .tabs ul {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 1px;
   list-style-type: none;
   background-color: #fff;
 }
@@ -80,114 +83,118 @@ body {
 /* Card Layout Section */
 .card-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-template-rows: repeat(2, auto); /* Two rows */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
   gap: 20px;
   margin-top: 20px;
 }
 
 .card {
   background-color: white;
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 200px; /* Static height for all cards */
-  overflow: hidden; /* Hide overflow content */
+  height: 200px; /* Card height */
+  overflow: hidden; 
+  font-family: ;
+}
+
+.card p{
+  font-size: 11px;
 }
 
 /* System Health and Recent Alerts on top */
 .card.system-health {
-  height: 300px; /* Full width for System Health card */
+  height: 186px; 
 }
 
 .card.system-health img {
-  margin-top: 20px; /* Adjust margin for image */
-  height: 80px;
-  width: 80px;
-  margin-bottom: 20px;
+  margin-top: 20px; 
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
 }
 
 .card.recent-alerts {
-  height: 300px/* Full width for Recent Alerts card */
+  height: 186px;
 }
 
 .card.recent-alerts img {
-  margin-top: 20px; /* Adjust margin for image */
-  height: 80px;
-  width: 80px;
-  margin-bottom: 20px;
+  margin-top: 20px; 
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
 }
 
 /* Map and Add Device on the bottom */
 .card.map {
-  height: 300px; /* Maintain same height for Map card */
+  height: 186px;
 }
 
 .card.add-device {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px; /* Maintain same height for Add Device card */
+  height: 186px; 
 }
 
 .card.add-device img {
-  margin-top: 80px; /* Adjust margin for image */
-  height: 80px;
-  width: 80px;
+  margin-top: 40px; 
+  height: 40px;
+  width: 40px;
   margin-bottom: 20px;
 }
 
 /* Bottom Navigation */
 .bottom-nav {
-  position: fixed; /* Make the navigation fixed */
-  bottom: 0; /* Align it to the bottom */
-  left: 0; /* Align to the left edge */
-  right: 0; /* Align to the right edge */
-  background-color: white; /* Set background color */
-  padding: 10px 0; /* Padding for the nav */
-  border-radius: 20px 20px 0 0; /* Rounded top corners */
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  z-index: 100; /* Ensure it appears above other content */
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  background-color: white; 
+  padding: 10px 0; 
+  border-radius: 20px 20px 0 0; 
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100; 
 }
 
 .bottom-nav ul {
-  display: flex; /* Flex layout */
-  justify-content: space-around; /* Space out the items */
-  padding: 0; /* Remove default padding */
-  list-style: none; /* No bullet points */
-  margin: 0; /* Remove default margin */
+  display: flex; 
+  justify-content: space-around;
+  padding: 0; 
+  list-style: none; 
+  margin: 0; 
 }
 
 .bottom-nav li {
-  text-align: center; /* Center text */
-  flex: 1; /* Equal space for all items */
+  text-align: center; 
+  flex: 1; 
 }
 
 .bottom-nav img {
-  width: 24px; /* Icon size */
-  height: 24px; /* Icon size */
+  width: 15px; 
+  height: 15px; 
 }
 
 .bottom-nav p {
-  margin-top: 4px; /* Space between icon and text */
+  margin-top: 4px; 
 }
 
 .bottom-nav ul li p {
   margin-top: 5px;
-  font-size: 1rem;
+  font-size: 11px;
 }
 
-/* Prevent text links from looking like links */
 .nav-item {
   text-decoration: none;
-  color: black; /* Default text color */
+  color: black; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: color 0.3s ease; /* Smooth transition for color change */
+  transition: color 0.3s ease; 
 }
 
 .nav-item:hover {
-  color: #F4626A; /* Change color on hover to #F4626A */
+  color: #F4626A; 
 }

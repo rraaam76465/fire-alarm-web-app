@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SettingsPage.css'; // Ensure you have styles defined in this file
+import './SettingsPage.css'; 
 
 const SettingsPage = () => {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
@@ -7,7 +7,7 @@ const SettingsPage = () => {
 
   const handleThemeChange = (e) => {
     setTheme(e.target.value);
-    document.body.className = e.target.value; // Apply the selected theme
+    document.body.className = e.target.value; 
   };
 
   return (

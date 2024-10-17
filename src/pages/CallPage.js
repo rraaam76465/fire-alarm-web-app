@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CallPage.css'; // Import the corresponding CSS
+import './CallPage.css'; 
 
 const CallPage = () => {
   const [firemanContact, setFiremanContact] = useState(null);
@@ -8,11 +8,10 @@ const CallPage = () => {
   const findNearestFireman = async () => {
     setLoading(true);
     try {
-      // Replace this URL with your actual API endpoint
+      // API FIREMAN
       const response = await fetch('https://api.example.com/nearest-fireman');
       const data = await response.json();
       
-      // Assuming the API returns the contact number of the nearest fireman
       if (data && data.contact) {
         setFiremanContact(data.contact);
       } else {

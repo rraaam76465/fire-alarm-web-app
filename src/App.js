@@ -11,9 +11,9 @@ import notificationImg from './assets/notification.png';
 import systemIcon from './assets/System.png';
 import alertIcon from './assets/Alert.png';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import Call from './pages/CallPage'; // Ensure the path is correct
-import Profile from './pages/ProfilePage'; // Ensure the path is correct
-import Settings from './pages/SettingsPage'; // Ensure the path is correct
+import Call from './pages/CallPage'; 
+import Profile from './pages/ProfilePage'; 
+import Settings from './pages/SettingsPage'; 
 
 const mapContainerStyle = {
   width: '100%',
@@ -34,8 +34,8 @@ function App() {
           <div className="user-info">
             <img src={profilePic} alt="Profile" className="profile-pic" />
             <div className="user-details">
-              <h2>Hi Alexis!</h2>
-              <p>Saturday, 31 August</p>
+              <h2>Hi User!</h2>
+              <p>Thursday, 17 October</p>
             </div>
           </div>
           <div className="notification-icon">
